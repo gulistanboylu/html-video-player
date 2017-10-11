@@ -23,6 +23,8 @@ function updateButton() {
 
 // Hook up event listeners
 video.addEventListener('click', togglePlay);
-video.addEventListener('play', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+video.addEventListener('timeupdate', handleProgress);
 
-toggle.addEventListener('click',togglePlay );
+toggle.addEventListener('click', togglePlay);
